@@ -3,9 +3,9 @@ import random
 import os
 
 def get_products():
-    url = os.environ.get("WOOCMERCE_URL")
-    ck = os.environ.get("WOOCMERCE_CK")
-    cs = os.environ.get("WOOCMERCE_CS")
+    url = os.environ.get("WOOCOMMERCE_URL")
+    ck = os.environ.get("WOOCOMMERCE_CK")
+    cs = os.environ.get("WOOCOMMERCE_CS")
 
     # Verificar si la URL es válida
     if not url or not url.startswith(('http://', 'https://')):
@@ -15,9 +15,3 @@ def get_products():
     if response.status_code == 200:
         return response.json()
     return []
-
-def get_random_product():
-    products = get_products()
-    if products:
-        return random.choice(products)
-    return None
