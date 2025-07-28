@@ -1,4 +1,3 @@
-
 import streamlit as st
 from woocommerce_api import get_random_product
 from telegram_bot import send_product_to_telegram, log_publication
