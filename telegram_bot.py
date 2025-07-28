@@ -32,3 +32,4 @@ def log_publication(product, method):
     with open("historial.csv", "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([datetime.now(), product['name'], method, product['permalink']])
+        
